@@ -10,9 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-    char args[MAX] = "";
+    char args[MAX] = "\"\"";
 
-    strcat(args, "\"\"");
     strcat(args, argv[0]);
     strcat(args, ".real");
     strcat(args, "\" ");
@@ -21,6 +20,8 @@ int main(int argc, char *argv[])
     {
         strcat(args, "\"");
         strcat(args, argv[i]);
+        if(args[strlen(args) - 1] == '\\')
+            strcat(args, "\\");
         strcat(args, "\" ");
     }
 
@@ -28,6 +29,7 @@ int main(int argc, char *argv[])
 
     FILE *shim_log = fopen("facetracker-shim.log", "w");
     fprintf(shim_log, "%s\n", args);
+    printf("%s\n", args);
 
     system(args);
 
