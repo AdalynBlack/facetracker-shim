@@ -1,6 +1,5 @@
 # Facetracker Shim
-A simple shim to insert `--use-dshowcapture 0` into the launch arguments of OpenSeeFace
-Useful for allowing OpenSeeFace to run in wine for VTubing in apps like Warudo and VSeeFace
+A simple shim to insert `--use-dshowcapture 0` into the launch arguments of OpenSeeFace. Useful for allowing OpenSeeFace to run in wine for VTubing in apps like Warudo and VSeeFace
 
 ## Usage
 1. Find `facetracker.exe` in the program of choice
